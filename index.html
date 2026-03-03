@@ -185,6 +185,51 @@
       outline-offset: 2px;
     }
 
+    /* CTA inverted button (white bg on gradient) */
+    .btn-cta-invert {
+      background: white;
+      color: #0A2540;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .btn-cta-invert:hover {
+      background: #F4F4F5;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(10,37,64,0.25), 0 8px 24px rgba(10,37,64,0.15);
+    }
+    .btn-cta-invert:active {
+      transform: translateY(0);
+    }
+    .btn-cta-invert:focus-visible {
+      outline: 2px solid #00A8E8;
+      outline-offset: 2px;
+    }
+
+    /* Contact icon bleed effect */
+    .contact-icon-bleed {
+      mask-image: radial-gradient(ellipse 60% 60% at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%);
+      -webkit-mask-image: radial-gradient(ellipse 60% 60% at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%);
+    }
+
+    /* Contact send button */
+    .btn-contact-send {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-contact-send:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(0,168,232,0.2);
+    }
+    .btn-contact-send:active {
+      transform: translateY(0);
+    }
+    .btn-contact-send:focus-visible {
+      outline: 2px solid #00A8E8;
+      outline-offset: 2px;
+    }
+
     /* Card hover */
     .card-interactive {
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
@@ -421,7 +466,7 @@
         <!-- CTA + mobile toggle -->
         <div class="flex items-center gap-4">
           <a href="#contact" class="hidden md:inline-flex btn-gradient font-heading text-sm font-semibold px-6 py-2.5 rounded-full">
-            Get a Demo
+            Contact Us
             <svg class="inline ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
           <button id="menuToggle" class="lg:hidden p-2 rounded-lg hover:bg-grey-50 focus-visible:outline-2 focus-visible:outline-cyan" aria-label="Open menu">
@@ -442,7 +487,7 @@
         <a href="#features" class="font-heading text-lg font-semibold text-navy hover:text-cyan-400">Features</a>
         <a href="#testimonials" class="font-heading text-lg font-semibold text-navy hover:text-cyan-400">Testimonials</a>
         <a href="#contact" class="font-heading text-lg font-semibold text-navy hover:text-cyan-400">Contact</a>
-        <a href="#contact" class="btn-gradient font-heading text-sm font-semibold px-6 py-3 rounded-full text-center mt-4">Get a Demo</a>
+        <a href="#contact" class="btn-gradient font-heading text-sm font-semibold px-6 py-3 rounded-full text-center mt-4">Contact Us</a>
       </div>
     </div>
   </header>
@@ -473,7 +518,7 @@
 
           <div class="flex flex-wrap items-center gap-4">
             <a href="#contact" class="btn-gradient font-heading text-sm font-bold px-8 py-3.5 rounded-full inline-flex items-center gap-2">
-              Get a Demo
+              Contact Us
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
             <a href="#services" class="btn-secondary font-heading text-sm font-bold px-8 py-3.5 rounded-full inline-flex items-center gap-2">
@@ -657,239 +702,6 @@
           <div class="relative rounded-3xl overflow-hidden shadow-floating">
             <div class="aspect-[4/3] relative overflow-hidden">
               <img src="brand_assets/Neural Network Image 1.jpg" alt="AI Neural Network" class="absolute inset-0 w-full h-full object-cover" />
-              <div style="display:none"><svg><defs>
-                    <linearGradient id="cb-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#00A8E8"/>
-                      <stop offset="100%" stop-color="#5E2CA5"/>
-                    </linearGradient>
-                    <linearGradient id="cb-cyan-h" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#00A8E8" stop-opacity="0"/>
-                      <stop offset="50%" stop-color="#00A8E8" stop-opacity="0.7"/>
-                      <stop offset="100%" stop-color="#00A8E8" stop-opacity="0"/>
-                    </linearGradient>
-                    <linearGradient id="cb-violet-h" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#5E2CA5" stop-opacity="0"/>
-                      <stop offset="50%" stop-color="#5E2CA5" stop-opacity="0.7"/>
-                      <stop offset="100%" stop-color="#5E2CA5" stop-opacity="0"/>
-                    </linearGradient>
-                    <linearGradient id="cb-stream-l" x1="100%" y1="0%" x2="0%" y2="0%">
-                      <stop offset="0%" stop-color="#00A8E8" stop-opacity="0.5"/>
-                      <stop offset="100%" stop-color="#00A8E8" stop-opacity="0"/>
-                    </linearGradient>
-                    <linearGradient id="cb-stream-r" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#5E2CA5" stop-opacity="0.5"/>
-                      <stop offset="100%" stop-color="#5E2CA5" stop-opacity="0"/>
-                    </linearGradient>
-                    <radialGradient id="cb-center-glow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
-                      <stop offset="30%" stop-color="#00A8E8" stop-opacity="0.15"/>
-                      <stop offset="100%" stop-color="#00A8E8" stop-opacity="0"/>
-                    </radialGradient>
-                    <radialGradient id="cb-brain-fill" cx="50%" cy="48%" r="50%">
-                      <stop offset="0%" stop-color="#00A8E8" stop-opacity="0.08"/>
-                      <stop offset="60%" stop-color="#5E2CA5" stop-opacity="0.04"/>
-                      <stop offset="100%" stop-color="#0A2540" stop-opacity="0"/>
-                    </radialGradient>
-                    <filter id="cb-glow">
-                      <feGaussianBlur stdDeviation="2" result="blur"/>
-                      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                    </filter>
-                    <filter id="cb-glow-strong">
-                      <feGaussianBlur stdDeviation="4" result="blur"/>
-                      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                    </filter>
-                    <filter id="cb-soft">
-                      <feGaussianBlur stdDeviation="6"/>
-                    </filter>
-                  </defs>
-
-                  <!-- Center glow -->
-                  <ellipse cx="250" cy="170" rx="100" ry="90" fill="url(#cb-center-glow)" filter="url(#cb-soft)">
-                    <animate attributeName="rx" values="100;110;100" dur="4s" repeatCount="indefinite"/>
-                    <animate attributeName="ry" values="90;98;90" dur="4s" repeatCount="indefinite"/>
-                  </ellipse>
-
-                  <!-- Data streams extending outward — left side -->
-                  <g stroke="url(#cb-stream-l)" stroke-width="1" fill="none" opacity="0.5">
-                    <line x1="10" y1="110" x2="175" y2="110"/>
-                    <line x1="25" y1="140" x2="170" y2="140"/>
-                    <line x1="15" y1="170" x2="165" y2="170"/>
-                    <line x1="30" y1="200" x2="170" y2="200"/>
-                    <line x1="20" y1="230" x2="175" y2="230"/>
-                  </g>
-                  <!-- Data streams extending outward — right side -->
-                  <g stroke="url(#cb-stream-r)" stroke-width="1" fill="none" opacity="0.5">
-                    <line x1="325" y1="110" x2="490" y2="110"/>
-                    <line x1="330" y1="140" x2="475" y2="140"/>
-                    <line x1="335" y1="170" x2="485" y2="170"/>
-                    <line x1="330" y1="200" x2="470" y2="200"/>
-                    <line x1="325" y1="230" x2="480" y2="230"/>
-                  </g>
-
-                  <!-- Brain fill -->
-                  <path d="M250,60 C290,58 330,75 345,105 C360,135 358,170 350,200 C342,230 320,260 290,275 C270,283 255,280 250,278 C245,280 230,283 210,275 C180,260 158,230 150,200 C142,170 140,135 155,105 C170,75 210,58 250,60Z" fill="url(#cb-brain-fill)" opacity="0.6"/>
-
-                  <!-- Brain outline — left hemisphere -->
-                  <path d="M250,60 C210,58 170,75 155,105 C140,135 142,170 150,200 C158,230 180,260 210,275 C230,283 245,280 250,278" fill="none" stroke="#00A8E8" stroke-width="1.5" opacity="0.7" filter="url(#cb-glow)"/>
-                  <!-- Brain outline — right hemisphere -->
-                  <path d="M250,60 C290,58 330,75 345,105 C360,135 358,170 350,200 C342,230 320,260 290,275 C270,283 255,280 250,278" fill="none" stroke="#5E2CA5" stroke-width="1.5" opacity="0.7" filter="url(#cb-glow)"/>
-                  <!-- Brain midline -->
-                  <line x1="250" y1="60" x2="250" y2="278" stroke="url(#cb-grad)" stroke-width="0.8" opacity="0.4"/>
-
-                  <!-- Brain fold curves — left -->
-                  <g fill="none" stroke="#00A8E8" stroke-width="0.8" opacity="0.35">
-                    <path d="M245,85 C220,90 195,100 180,115"/>
-                    <path d="M248,115 C225,118 200,130 175,148"/>
-                    <path d="M248,150 C228,152 205,162 170,178"/>
-                    <path d="M247,185 C225,188 205,198 175,210"/>
-                    <path d="M246,220 C228,222 210,232 195,248"/>
-                    <path d="M247,250 C235,255 220,262 210,270"/>
-                  </g>
-                  <!-- Brain fold curves — right -->
-                  <g fill="none" stroke="#5E2CA5" stroke-width="0.8" opacity="0.35">
-                    <path d="M255,85 C280,90 305,100 320,115"/>
-                    <path d="M252,115 C275,118 300,130 325,148"/>
-                    <path d="M252,150 C272,152 295,162 330,178"/>
-                    <path d="M253,185 C275,188 295,198 325,210"/>
-                    <path d="M254,220 C272,222 290,232 305,248"/>
-                    <path d="M253,250 C265,255 280,262 290,270"/>
-                  </g>
-
-                  <!-- Internal circuit traces — PCB style with 90° bends -->
-                  <g fill="none" stroke-width="1" opacity="0.5">
-                    <!-- Left side circuits -->
-                    <path d="M175,110 L200,110 L200,130 L225,130" stroke="#00A8E8"/>
-                    <path d="M170,140 L190,140 L190,155 L220,155 L220,170 L240,170" stroke="#00A8E8"/>
-                    <path d="M175,200 L195,200 L195,185 L230,185" stroke="#00A8E8"/>
-                    <path d="M180,230 L210,230 L210,215 L235,215" stroke="#00A8E8"/>
-                    <path d="M185,170 L205,170 L205,148 L228,148" stroke="#00A8E8"/>
-                    <path d="M168,168 L185,168 L185,190 L210,190 L210,205 L232,205" stroke="#00A8E8"/>
-                    <!-- Right side circuits -->
-                    <path d="M325,110 L300,110 L300,130 L275,130" stroke="#5E2CA5"/>
-                    <path d="M330,140 L310,140 L310,155 L280,155 L280,170 L260,170" stroke="#5E2CA5"/>
-                    <path d="M325,200 L305,200 L305,185 L270,185" stroke="#5E2CA5"/>
-                    <path d="M320,230 L290,230 L290,215 L265,215" stroke="#5E2CA5"/>
-                    <path d="M315,170 L295,170 L295,148 L272,148" stroke="#5E2CA5"/>
-                    <path d="M332,168 L315,168 L315,190 L290,190 L290,205 L268,205" stroke="#5E2CA5"/>
-                    <!-- Cross-brain circuits through center -->
-                    <path d="M225,130 L250,130 L275,130" stroke="url(#cb-grad)" opacity="0.6"/>
-                    <path d="M240,170 L250,170 L260,170" stroke="url(#cb-grad)" opacity="0.6"/>
-                    <path d="M230,185 L250,185 L270,185" stroke="url(#cb-grad)" opacity="0.6"/>
-                    <path d="M235,215 L250,215 L265,215" stroke="url(#cb-grad)" opacity="0.6"/>
-                    <path d="M228,148 L250,148 L272,148" stroke="url(#cb-grad)" opacity="0.6"/>
-                    <path d="M232,205 L250,205 L268,205" stroke="url(#cb-grad)" opacity="0.6"/>
-                  </g>
-
-                  <!-- Circuit nodes — glowing dots at intersections -->
-                  <g filter="url(#cb-glow)">
-                    <!-- Left hemisphere nodes -->
-                    <circle cx="175" cy="110" r="2.5" fill="#00A8E8" opacity="0.9"/>
-                    <circle cx="200" cy="130" r="2" fill="#00A8E8" opacity="0.8"/>
-                    <circle cx="225" cy="130" r="3" fill="#00A8E8" opacity="0.9"/>
-                    <circle cx="190" cy="140" r="2" fill="#00A8E8" opacity="0.7"/>
-                    <circle cx="220" cy="155" r="2.5" fill="#00A8E8" opacity="0.8"/>
-                    <circle cx="240" cy="170" r="3" fill="#00A8E8" opacity="0.9"/>
-                    <circle cx="185" cy="170" r="2" fill="#00A8E8" opacity="0.7"/>
-                    <circle cx="228" cy="148" r="2.5" fill="#00A8E8" opacity="0.8"/>
-                    <circle cx="195" cy="200" r="2" fill="#00A8E8" opacity="0.7"/>
-                    <circle cx="230" cy="185" r="3" fill="#00A8E8" opacity="0.9"/>
-                    <circle cx="210" cy="230" r="2" fill="#00A8E8" opacity="0.7"/>
-                    <circle cx="235" cy="215" r="2.5" fill="#00A8E8" opacity="0.8"/>
-                    <circle cx="168" cy="168" r="2" fill="#00A8E8" opacity="0.6"/>
-                    <circle cx="210" cy="205" r="2" fill="#00A8E8" opacity="0.7"/>
-                    <circle cx="232" cy="205" r="2.5" fill="#00A8E8" opacity="0.8"/>
-                    <!-- Right hemisphere nodes -->
-                    <circle cx="325" cy="110" r="2.5" fill="#5E2CA5" opacity="0.9"/>
-                    <circle cx="300" cy="130" r="2" fill="#5E2CA5" opacity="0.8"/>
-                    <circle cx="275" cy="130" r="3" fill="#5E2CA5" opacity="0.9"/>
-                    <circle cx="310" cy="140" r="2" fill="#5E2CA5" opacity="0.7"/>
-                    <circle cx="280" cy="155" r="2.5" fill="#5E2CA5" opacity="0.8"/>
-                    <circle cx="260" cy="170" r="3" fill="#5E2CA5" opacity="0.9"/>
-                    <circle cx="315" cy="170" r="2" fill="#5E2CA5" opacity="0.7"/>
-                    <circle cx="272" cy="148" r="2.5" fill="#5E2CA5" opacity="0.8"/>
-                    <circle cx="305" cy="200" r="2" fill="#5E2CA5" opacity="0.7"/>
-                    <circle cx="270" cy="185" r="3" fill="#5E2CA5" opacity="0.9"/>
-                    <circle cx="290" cy="230" r="2" fill="#5E2CA5" opacity="0.7"/>
-                    <circle cx="265" cy="215" r="2.5" fill="#5E2CA5" opacity="0.8"/>
-                    <circle cx="332" cy="168" r="2" fill="#5E2CA5" opacity="0.6"/>
-                    <circle cx="290" cy="205" r="2" fill="#5E2CA5" opacity="0.7"/>
-                    <circle cx="268" cy="205" r="2.5" fill="#5E2CA5" opacity="0.8"/>
-                    <!-- Center nodes -->
-                    <circle cx="250" cy="130" r="3.5" fill="white" opacity="0.9">
-                      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="250" cy="170" r="4" fill="white" opacity="0.95" filter="url(#cb-glow-strong)">
-                      <animate attributeName="r" values="4;5;4" dur="3s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="250" cy="148" r="2.5" fill="white" opacity="0.8"/>
-                    <circle cx="250" cy="185" r="3" fill="white" opacity="0.85">
-                      <animate attributeName="opacity" values="0.85;0.5;0.85" dur="2.5s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="250" cy="205" r="2.5" fill="white" opacity="0.8"/>
-                    <circle cx="250" cy="215" r="3" fill="white" opacity="0.85"/>
-                  </g>
-
-                  <!-- Animated data pulses along circuit traces -->
-                  <g filter="url(#cb-glow)">
-                    <!-- Left circuits -->
-                    <circle r="2" fill="#00A8E8" opacity="0.9">
-                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M175,110 L200,110 L200,130 L225,130 L250,130"/>
-                    </circle>
-                    <circle r="2" fill="#00A8E8" opacity="0.8">
-                      <animateMotion dur="3s" repeatCount="indefinite" path="M170,140 L190,140 L190,155 L220,155 L220,170 L240,170 L250,170" begin="0.5s"/>
-                    </circle>
-                    <circle r="1.5" fill="#00A8E8" opacity="0.7">
-                      <animateMotion dur="2.8s" repeatCount="indefinite" path="M175,200 L195,200 L195,185 L230,185 L250,185" begin="1s"/>
-                    </circle>
-                    <circle r="2" fill="#00A8E8" opacity="0.8">
-                      <animateMotion dur="3.2s" repeatCount="indefinite" path="M180,230 L210,230 L210,215 L235,215 L250,215" begin="1.5s"/>
-                    </circle>
-                    <!-- Right circuits -->
-                    <circle r="2" fill="#5E2CA5" opacity="0.9">
-                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M325,110 L300,110 L300,130 L275,130 L250,130" begin="0.3s"/>
-                    </circle>
-                    <circle r="2" fill="#5E2CA5" opacity="0.8">
-                      <animateMotion dur="3s" repeatCount="indefinite" path="M330,140 L310,140 L310,155 L280,155 L280,170 L260,170 L250,170" begin="0.8s"/>
-                    </circle>
-                    <circle r="1.5" fill="#5E2CA5" opacity="0.7">
-                      <animateMotion dur="2.8s" repeatCount="indefinite" path="M325,200 L305,200 L305,185 L270,185 L250,185" begin="1.3s"/>
-                    </circle>
-                    <circle r="2" fill="#5E2CA5" opacity="0.8">
-                      <animateMotion dur="3.2s" repeatCount="indefinite" path="M320,230 L290,230 L290,215 L265,215 L250,215" begin="1.8s"/>
-                    </circle>
-                    <!-- Data stream pulses — left -->
-                    <circle r="1.5" fill="#00A8E8" opacity="0.6">
-                      <animateMotion dur="4s" repeatCount="indefinite" path="M10,110 L175,110"/>
-                    </circle>
-                    <circle r="1.5" fill="#00A8E8" opacity="0.5">
-                      <animateMotion dur="3.5s" repeatCount="indefinite" path="M15,170 L165,170" begin="1s"/>
-                    </circle>
-                    <circle r="1.5" fill="#00A8E8" opacity="0.5">
-                      <animateMotion dur="4.2s" repeatCount="indefinite" path="M20,230 L175,230" begin="2s"/>
-                    </circle>
-                    <!-- Data stream pulses — right -->
-                    <circle r="1.5" fill="#5E2CA5" opacity="0.6">
-                      <animateMotion dur="4s" repeatCount="indefinite" path="M490,110 L325,110" begin="0.5s"/>
-                    </circle>
-                    <circle r="1.5" fill="#5E2CA5" opacity="0.5">
-                      <animateMotion dur="3.5s" repeatCount="indefinite" path="M485,170 L335,170" begin="1.5s"/>
-                    </circle>
-                    <circle r="1.5" fill="#5E2CA5" opacity="0.5">
-                      <animateMotion dur="4.2s" repeatCount="indefinite" path="M480,230 L325,230" begin="2.5s"/>
-                    </circle>
-                  </g>
-
-                  <!-- Outer data dots on streams (static, decorative) -->
-                  <g opacity="0.3">
-                    <circle cx="45" cy="110" r="1" fill="#00A8E8"/><circle cx="70" cy="140" r="1" fill="#00A8E8"/>
-                    <circle cx="55" cy="170" r="1" fill="#00A8E8"/><circle cx="80" cy="200" r="1" fill="#00A8E8"/>
-                    <circle cx="60" cy="230" r="1" fill="#00A8E8"/>
-                    <circle cx="455" cy="110" r="1" fill="#5E2CA5"/><circle cx="430" cy="140" r="1" fill="#5E2CA5"/>
-                    <circle cx="445" cy="170" r="1" fill="#5E2CA5"/><circle cx="420" cy="200" r="1" fill="#5E2CA5"/>
-                    <circle cx="440" cy="230" r="1" fill="#5E2CA5"/>
-                  </g>
-                </svg>
-              </div>
             </div>
           </div>
           <!-- Floating stat badge -->
@@ -1071,41 +883,85 @@
     </div>
   </section>
 
-  <!-- ============ CTA SECTION ============ -->
-  <section id="contact" class="py-24 lg:py-32 relative overflow-hidden">
-    <!-- Decorative background -->
-    <div class="absolute inset-0 hero-pattern"></div>
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contact" class="relative overflow-hidden noise-overlay brand-gradient">
+    <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-8 py-14 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
 
-    <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-8">
-      <div class="relative rounded-3xl overflow-hidden shadow-floating">
-        <div class="absolute inset-0 brand-gradient"></div>
-        <div class="absolute inset-0 bg-navy-500/30"></div>
-        <!-- Noise overlay -->
-        <div class="absolute inset-0 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E&quot;);"></div>
-
-        <div class="relative z-10 px-8 md:px-16 py-16 md:py-24 text-center">
-          <h2 class="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-white mb-6 max-w-2xl mx-auto leading-tight">
-            Ready to unlock the power of AI for your workplace?
-          </h2>
-          <p class="text-white/80 text-lg max-w-xl mx-auto mb-10">
-            Let's start with a conversation. Book a free consultation to discover how AI can transform your business.
-          </p>
-          <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="#" class="btn-primary font-heading text-sm font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 bg-white !text-navy hover:!bg-grey-50" style="color: #0A2540 !important;">
-              Get a Demo
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-            <a href="#" class="font-heading text-sm font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white">
-              Contact Us
-            </a>
+        <!-- Left column — branding + intro -->
+        <div class="fade-up">
+          <div class="flex items-start gap-6">
+            <img src="brand_assets/Ai in the Workplace Head Image.png" alt="" class="w-36 h-36 -ml-3 -mt-3 contact-icon-bleed" />
+            <div>
+              <h2 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-tight mb-4">
+                Get in touch.
+              </h2>
+              <p class="text-white/80 text-lg leading-relaxed max-w-md">
+                Need some help? Let us know what you need and we'll get straight back to you.
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- Right column — contact form -->
+        <form class="fade-up space-y-7" onsubmit="event.preventDefault(); this.querySelector('.contact-success').style.display='flex'; this.querySelector('.contact-fields').style.display='none';">
+          <div class="contact-fields space-y-7">
+            <!-- First / Last name row -->
+            <div class="grid sm:grid-cols-2 gap-8">
+              <div>
+                <label for="contact-first" class="block font-heading text-xs font-bold uppercase tracking-[0.15em] text-white mb-3">First Name</label>
+                <input id="contact-first" type="text" required class="w-full bg-transparent border-b border-white/30 text-white text-base py-2.5 placeholder:text-white/40 focus:border-white focus:outline-none transition-colors duration-200" />
+              </div>
+              <div>
+                <label for="contact-last" class="block font-heading text-xs font-bold uppercase tracking-[0.15em] text-white mb-3">Last Name</label>
+                <input id="contact-last" type="text" required class="w-full bg-transparent border-b border-white/30 text-white text-base py-2.5 placeholder:text-white/40 focus:border-white focus:outline-none transition-colors duration-200" />
+              </div>
+            </div>
+
+            <!-- Company / Email row -->
+            <div class="grid sm:grid-cols-2 gap-8">
+              <div>
+                <label for="contact-company" class="block font-heading text-xs font-bold uppercase tracking-[0.15em] text-white mb-3">Company</label>
+                <input id="contact-company" type="text" class="w-full bg-transparent border-b border-white/30 text-white text-base py-2.5 placeholder:text-white/40 focus:border-white focus:outline-none transition-colors duration-200" />
+              </div>
+              <div>
+                <label for="contact-email" class="block font-heading text-xs font-bold uppercase tracking-[0.15em] text-white mb-3">Email Address</label>
+                <input id="contact-email" type="email" required class="w-full bg-transparent border-b border-white/30 text-white text-base py-2.5 placeholder:text-white/40 focus:border-white focus:outline-none transition-colors duration-200" />
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="contact-message" class="block font-heading text-xs font-bold uppercase tracking-[0.15em] text-white mb-3">Message</label>
+              <textarea id="contact-message" rows="3" placeholder="Start typing here..." class="w-full bg-transparent border-b border-white/30 text-white text-base py-2.5 placeholder:text-white/40 focus:border-white focus:outline-none transition-colors duration-200 resize-none"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div>
+              <button type="submit" class="btn-contact-send font-heading text-sm font-bold px-10 py-3.5 rounded-full">
+                Send
+              </button>
+            </div>
+          </div>
+
+          <!-- Success state -->
+          <div class="contact-success hidden items-center justify-center min-h-[300px]">
+            <div class="text-center">
+              <svg class="w-12 h-12 text-cyan mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <h3 class="font-heading font-bold text-xl text-white mb-2">Message sent!</h3>
+              <p class="text-grey-300">We'll be in touch shortly.</p>
+            </div>
+          </div>
+        </form>
+
       </div>
+      <!-- Separator line -->
+      <div class="border-b border-white/10 mt-8 lg:mt-10"></div>
     </div>
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="bg-navy-500 pt-16 pb-8 relative noise-overlay">
+  <footer class="bg-navy-500 pt-10 pb-8 relative noise-overlay">
     <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-8">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
         <!-- Brand column -->
@@ -1132,9 +988,9 @@
           <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-6">Company</h4>
           <ul class="space-y-3">
             <li><a href="#about" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">About Us</a></li>
-            <li><a href="#" class="text-sm text-grey-200 hover:text-white transition-colors duration-200">Blog</a></li>
-            <li><a href="#" class="text-sm text-grey-200 hover:text-white transition-colors duration-200">Careers</a></li>
-            <li><a href="#contact" class="text-sm text-grey-200 hover:text-white transition-colors duration-200">Contact</a></li>
+            <li><a href="#" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Blog</a></li>
+            <li><a href="#" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Careers</a></li>
+            <li><a href="#contact" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Contact</a></li>
           </ul>
         </div>
 
@@ -1142,10 +998,10 @@
         <div>
           <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-6">Services</h4>
           <ul class="space-y-3">
-            <li><a href="#services" class="text-sm text-grey-200 hover:text-white transition-colors duration-200">AI Consulting</a></li>
-            <li><a href="#services" class="text-sm text-grey-200 hover:text-white transition-colors duration-200">Training Programs</a></li>
-            <li><a href="#services" class="text-sm text-grey-200 hover:text-white transition-colors duration-200">Integration Services</a></li>
-            <li><a href="#" class="text-sm text-grey-200 hover:text-white transition-colors duration-200">Custom Solutions</a></li>
+            <li><a href="#services" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">AI Consulting</a></li>
+            <li><a href="#services" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Training Programs</a></li>
+            <li><a href="#services" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Integration Services</a></li>
+            <li><a href="#" class="text-sm text-grey-200 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Custom Solutions</a></li>
           </ul>
         </div>
 
@@ -1166,9 +1022,9 @@
       <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-xs text-grey-300">&copy; 2026 AI in the Workplace. All rights reserved.</p>
         <div class="flex items-center gap-6">
-          <a href="#" class="text-xs text-grey-300 hover:text-white transition-colors duration-200">Privacy Policy</a>
-          <a href="#" class="text-xs text-grey-300 hover:text-white transition-colors duration-200">Terms of Service</a>
-          <a href="#" class="text-xs text-grey-300 hover:text-white transition-colors duration-200">Cookies</a>
+          <a href="#" class="text-xs text-grey-300 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Privacy Policy</a>
+          <a href="#" class="text-xs text-grey-300 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Terms of Service</a>
+          <a href="#" class="text-xs text-grey-300 hover:text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-cyan">Cookies</a>
         </div>
       </div>
     </div>
@@ -1211,17 +1067,14 @@
       });
     });
 
-    // Header shrink on scroll
+    // Header shadow on scroll
     const header = document.getElementById('header');
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-      const scroll = window.scrollY;
-      if (scroll > 60) {
+      if (window.scrollY > 60) {
         header.style.boxShadow = '0 1px 2px rgba(10,37,64,0.04), 0 4px 12px rgba(10,37,64,0.06)';
       } else {
         header.style.boxShadow = 'none';
       }
-      lastScroll = scroll;
     }, { passive: true });
   </script>
 
